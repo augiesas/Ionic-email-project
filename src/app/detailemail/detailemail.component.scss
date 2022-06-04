@@ -1,0 +1,28 @@
+#tgl {
+  float: right;
+  margin: 10px;
+  background-color: #fc997c;
+}
+
+ion-textarea {
+ margin-left: 5px;
+ text-align: justify;
+ margin-right: 5px;
+}
+#reply{
+  float: right;
+  margin-right: 10px;
+  --background: #fc997c;
+  --color: black;
+margin-top: 10px;
+}
+ion-item{
+  clear: both;
+}
+#spam{
+  float: left;
+  --background: #fc997c;
+  --color: black;
+  margin-left: 10px;
+  margin-top: 10px;
+}

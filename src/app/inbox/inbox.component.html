@@ -1,0 +1,46 @@
+<ion-card *ngFor="let email of emails">
+  <ion-card-content>
+    <ion-item>
+      <ion-icon
+        name="star"
+        slot="end"
+        (click)="favorite(email.idemail)"
+        [ngStyle]="{
+          color: email.favorite_spam === 'favorite' ? '#ffea00' : '#d3d4d3'
+        }"
+      ></ion-icon>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label id="subject">From: {{ email.pengirim }}</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label id="subject">Subject: {{ email.subject }}</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="6">
+            <ion-label id="isi">{{ email.isi }}</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-label
+      color="primary"
+      id="detail"
+      routerLink="/detailemail/{{ email.idemail }}"
+      >Detail</ion-label
+    >
+    <ion-button (click)="delete(email.idemail)" id="delete">Delete</ion-button>
+  </ion-card-content>
+</ion-card>
+<br /><br /><br /><br /><br />
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="create" routerLink="/createemail/0"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

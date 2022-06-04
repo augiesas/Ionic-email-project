@@ -1,0 +1,24 @@
+<ion-grid>
+  <ion-row>
+    <ion-col size="9">
+      <ion-item>
+        <ion-label>Username: </ion-label>&nbsp;&nbsp;
+        <ion-input disabled="{{ disabled_username }}" value="{{ username }}" [(ngModel)]="username"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-button size="small" (click)="editprofile()">Edit</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label>Email: &nbsp;&nbsp;{{ email }}</ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-button size="default" expand="block" class="changepass" routerLink="/changepassword/{{ username }}">Change Password
+</ion-button><br><br>
+<ion-button size="default" class="saveprofile" (click)="saveprofile()">Save</ion-button>

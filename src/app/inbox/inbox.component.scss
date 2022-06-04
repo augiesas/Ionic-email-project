@@ -1,0 +1,35 @@
+ion-button {
+  --background: #fc997c;
+  --color: black;
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+#subject {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+}
+
+#detail {
+  margin-top: 10px;
+  float: right;
+  margin-right: 20px;
+}
+
+#delete {
+  float: left;
+  margin-left: 10px;
+}
+
+#isi {
+  font-size: 15px;
+}
+
+ion-fab-button {
+  --color: black;
+  --background: #fc997c;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
